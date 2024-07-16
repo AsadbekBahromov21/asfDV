@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+   /* background: url(./images/2_ormon-680x510.jpg) no-repeat center/cover; */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    /* background: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+    flex: 1;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: #0005;
+    text-decoration: none;
+    font-weight: 700;
+    margin-left: 40px;
+}
+.navigation a::after{
+    content: "";
+    left: 0;
+    bottom: -6px;
+    transform: scaleX(0);
+    transform-origin: right;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+   transition: transform .5s;
+}
+.navigation a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.navigation .buttonlogin {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 600;
+    margin-left: 40px;
+    transition: .5s;
+}
+.navigation .buttonlogin:hover{
+    background: #fff;
+    color: #162938;
+}
+.wrapper {
+    margin-top: 50px;
+    display: flex;
+    width: 100%;
+    padding: 50px;
+    justify-content: center;
+    /* justify-content: space-around; */
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.card {
+    width: 300px;
+    padding: 16px;
+   border-radius: 14px;
+   box-shadow:  0 0 16px #0004;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   gap: 10px;
+    
+}
+h3{
+    font-size: 20px;
+    color: #0005;
+    font-weight: 700
+}
+p{
+    font-size: 16px;
+    color: #162938;
+    font-weight: 600;
+}
